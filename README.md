@@ -1,4 +1,4 @@
-# Tidal Install
+# Tidal Playground
 
 A hopefully simple way to get tidal and tidal-midi installed and running.
 
@@ -16,3 +16,15 @@ The instructions to install stack are found on their website.
 [Install Stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/)
 
 Installing stack should not require a pre-installed version of haskell, ghc, cabal or the haskell-platform.
+
+## Other Requirements
+
+* SuperCollider
+
+## Running with Vim
+
+* Install *tmux*.
+* Install *vim*
+* Install the [tidal vim plugin](https://github.com/munshkr/vim-tidal).
+* Run the `tidalvim` script from within this folder (Make sure you're not in a tmux session already)
+
