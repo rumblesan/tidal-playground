@@ -1,4 +1,4 @@
 module Main where
 
 main :: IO ()
-main = putStrLn "Use `stack ghci`"
+main = putStrLn "Welcome to the Tidal Playground!"
