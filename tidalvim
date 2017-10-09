@@ -1,0 +1,20 @@
+#!/bin/bash
+set -euf -o pipefail
+
+VIM=${EDITOR}
+
+FILE=${FILE:-"$(date +%F).tidal"}
+SESSION=${SESSION:-"tidal"}
+
+TIDAL_TEMPO_IP=${TIDAL_TEMPO_IP:-""}
+
+args=${@:-$FILE}
+
+# Check if tmux session "tidal" is running, attach only
+# else, create new session, split windows and run processes
+tmux -2 attach-session -t $SESSION || tmux -2 \
+  new-session -s $SESSION \; \
+  split-window -v -t $SESSION \; \
+  send-keys -t 1 "$VIM $args" C-m \; \
+  send-keys -t 2 "TIDAL_TEMPO_IP=$TIDAL_TEMPO_IP ./tidal" C-m \; \
+  select-pane -t 1
