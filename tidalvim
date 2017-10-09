@@ -3,7 +3,7 @@ set -euf -o pipefail
 
 VIM=${EDITOR}
 
-FILE=${FILE:-"$(date +%F).tidal"}
+FILE=${FILE:-"./sets/$(date +%F).tidal"}
 SESSION=${SESSION:-"tidal"}
 
 TIDAL_TEMPO_IP=${TIDAL_TEMPO_IP:-""}
