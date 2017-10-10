@@ -30,4 +30,5 @@ Installing stack should not require a pre-installed version of haskell, ghc, cab
 
 ## Custom code
 
-Any code placed in the **custom** folder can be loaded either by directly calling the `:load custom/MyCode.hs` command in the tidal repl, or by placing the `:load` command call in the **Setup.ghci** file.
+Within the **custom** folder you can place a *.ghci* file which will be loaded after the *Setup.ghci* file.
+Any code placed in the **custom** folder can be loaded either by directly calling the `:load custom/MyCode.hs` command in the tidal repl, or by placing the `:load` command call in the *custom/.ghci* file.
