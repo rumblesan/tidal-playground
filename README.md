@@ -28,3 +28,6 @@ Installing stack should not require a pre-installed version of haskell, ghc, cab
 * Install the [tidal vim plugin](https://github.com/munshkr/vim-tidal).
 * Run the `tidalvim` script from within this folder (Make sure you're not in a tmux session already)
 
+## Custom code
+
+Any code placed in the **custom** folder can be loaded either by directly calling the `:load custom/MyCode.hs` command in the tidal repl, or by placing the `:load` command call in the **Setup.ghci** file.
