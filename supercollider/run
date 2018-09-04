@@ -2,6 +2,6 @@
 
 SUPERCOLLIDER=${SCEXE:-"/Applications/SuperCollider.app/Contents/MacOS/sclang"}
 
-STARTUP_FILE="./supercollider/startup.sc"
+STARTUP_FILE="./supercollider/startup.scd"
 
 eval "${SUPERCOLLIDER} ${STARTUP_FILE}"

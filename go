@@ -1,5 +1,4 @@
 #!/bin/bash
-set -euf -o pipefail
 
 if [ -n "$TMUX" ]; then
   echo "Already in an existing tmux session"
