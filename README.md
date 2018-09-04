@@ -26,7 +26,7 @@ Installing stack should not require a pre-installed version of haskell, ghc, cab
 * Install *tmux*.
 * Install *vim*
 * Install the [tidal vim plugin](https://github.com/munshkr/vim-tidal).
-* Run the `tidalvim` script from within this folder (Make sure you're not in a tmux session already)
+* Run the `go` script from within this folder
 
 ## Custom code
 

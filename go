@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euf -o pipefail
 
+if [ -n "$TMUX" ]; then
+  echo "Already in an existing tmux session"
+  exit 1
+fi
+
 VIM=${EDITOR}
 
 FILE=${FILE:-"./sets/$(date +%F).tidal"}
