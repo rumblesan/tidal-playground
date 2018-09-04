@@ -7,11 +7,13 @@ s.options.maxNodes = 1024 * 32; // increase this if you are getting drop outs an
 s.options.numOutputBusChannels = 2; // set this to your hardware output channel size, if necessary
 s.options.numInputBusChannels = 2; // set this to your hardware output channel size, if necessary
 // boot the server and start SuperDirt
+
 s.waitForBoot {
 	~dirt = SuperDirt(2, s); // two output channels, increase if you want to pan across more channels
 	~dirt.loadSoundFiles;   // load samples (path containing a wildcard can be passed in)
 	// for example: ~dirt.loadSoundFiles("/Users/myUserName/Dirt/samples/*");
 	// s.sync; // optionally: wait for samples to be read
+	~dirt.loadSoundFiles(thisProcess.nowExecutingPath.dirname +/+ "../samplebanks/*");
 	~dirt.start(57120, [0, 0]);   // start listening on port 57120, create two busses each sending audio to channel 0
 };
 
